@@ -1,38 +1,29 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AppComponent } from './app.component';
-// import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms';
+import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
-import { HttpClientModule } from '@angular/common/http';
-import { SearchService } from './search-service/search.service';
-import {ProfileRequestService} from './profile-request.service';
-import { RouterModule, Routes } from '@angular/router';
-
-const routes: Routes = [
-  {path: 'search', component: SearchComponent }
-];
+import { NavbarComponent } from './navbar/navbar.component';
+// import { GiphyNavbarComponent } from './giphy-navbar/giphy-navbar.component';
+// import { NotFoundComponent } from './not-found/not-found.component';
+import { SearchFormComponent } from './search-form/search-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
-    // NavbarComponent,
-    // SearchFormComponent
+    NavbarComponent,
+    // GiphyNavbarComponent,
+    // NotFoundComponent,
+    SearchFormComponent
   ],
   imports: [
     BrowserModule,
-    BrowserModule,
-    BrowserAnimationsModule,
     AppRoutingModule,
-    // MDBBootstrapModule.forRoot(),
     FormsModule,
     HttpClientModule,
-    SearchService,
-    ProfileRequestService,
-    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
