@@ -26,6 +26,20 @@
               <span class="btn btn-danger">{{profile.public_gists}} Public Gists </span>
               <span class="btn btn-primary">{{profile.public_repos}} Public Repos</span>
             </p>
+            <p>
+              <a href="{{profile.html_url}}" class="btn btn-primary" target="_blank">View Profile On Github</a>
+            </p>
+            <div class="panel panel-default">
+              <div class="panel panel-heading">
+                <h3 class="panel-title">Repos</h3>
+              </div>
+              <div class="class panel-body" *ngFor="let repo of repos">
+                <p class="clearfix">
+                  {{repo.name}}<a href="{{repo.html_url}}" class="btn btn-sm btn-info" target="_blank">View this project on github</a>
+                </p>
+                <p>{{repo.description}}</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
