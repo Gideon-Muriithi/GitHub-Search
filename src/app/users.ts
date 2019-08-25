@@ -1,9 +1,9 @@
 export class Users {
-  created_at: string;
-  avatar_url: any;
-  followers_url: number;
-  following_url: number;
-  repos_url: string;
+  createdAt: string;
+  avatarUrl: any;
+  followersUrl: number;
+  followingUrl: number;
+  reposUrl: string;
   login: number;
-  public_repos: string;
+  publicRepos: string;
 }
