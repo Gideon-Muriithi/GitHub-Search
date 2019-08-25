@@ -14,7 +14,7 @@ import { Users } from '../users';
   styleUrls: ['./search.component.css'],
   // providers: [ SearchService, ProfileRequestService, SweetAlertService]
 })
-export class DashboardComponent implements OnInit {
+export class SearchComponent implements OnInit {
   userName = 'Gideon-Muriithi';
   repos: Repos[];
   users: Users[];
