@@ -1,7 +1,7 @@
 export class Repos {
   id: string;
   name: string;
-  htmlurl: string;
+  htmlUrl: string;
   description: string;
 }
 
