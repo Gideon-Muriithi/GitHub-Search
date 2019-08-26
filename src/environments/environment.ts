@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  SEARCHAPIKEY: '901c08d18caec89e5f4c75aa11b78c406cca8b8b',
+  SEARCHAPIKEY: '45:71:a9:32:79:fd:8d:21:1b:78:7a:8a:b6:f1:f3:3f:8d:0e',
 };
 
 /*

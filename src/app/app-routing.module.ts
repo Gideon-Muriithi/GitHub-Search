@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 // import {NotFoundComponent} from './not-found/not-found.component';
 
 const routes: Routes = [
+  // { path: '', redirectTo: '/profile', pathMatch: 'full'},
 ];
 
 @NgModule({
