@@ -6,12 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ProfileService } from './services/profile.service';
+import { UserDirectiveDirective } from './user-directive.directive';
+import { RepoCreationDatePipe } from './repo-creation-date.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
+    UserDirectiveDirective,
+    RepoCreationDatePipe,
   ],
   imports: [
     BrowserModule,
