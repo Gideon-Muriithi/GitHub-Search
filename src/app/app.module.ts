@@ -8,6 +8,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { ProfileService } from './services/profile.service';
 import { UserDirectiveDirective } from './user-directive.directive';
 import { RepoCreationDatePipe } from './repo-creation-date.pipe';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { RepoCreationDatePipe } from './repo-creation-date.pipe';
     ProfileComponent,
     UserDirectiveDirective,
     RepoCreationDatePipe,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
