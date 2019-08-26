@@ -3,7 +3,7 @@
 <div class="container-fluid" id="container">
   <div id="body">
     <div>
-      <form (ngSubmit)='findProfile()' #quoteForm='ngForm'>
+      <form (ngSubmit)='findProfile(username)' #quoteForm='ngForm'>
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Enter username to search on github here..."
             [(ngModel)]="username" name="username">
