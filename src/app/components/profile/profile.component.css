@@ -3,8 +3,22 @@
 }
 
 #body{
-  background-color: rebeccapurple;
+  /* background-color: lightblue; */
+  background-image: url("src/assets/img2.jpg");
+  background-position: right top;
+  background-attachment: scroll;
 }
 #container{
   padding-top: 20px;
+}
+.jumbotron{
+height: 10px;
+}
+.form-group{
+  width: 400px;
+  padding-left: 3%;
+}
+#prof{
+  width:70%;
+  height:auto;
 }

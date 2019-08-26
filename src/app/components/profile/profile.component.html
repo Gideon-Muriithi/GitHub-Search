@@ -16,45 +16,49 @@
     <div *ngIf="profile">
       <div class="panel panel-default">
         <div class="panel-heading">
-          {{profile.login}}
+          <h3 style="color: yellow">{{profile.login}}</h3>
         </div>
         <div class="panel-body">
           <div class="row">
             <div class="col-sm-4">
-              <img src="{{profile.avatar_url}}" class="img-circle img-responsive" alt="Profile Image">
+              <img src="{{profile.avatar_url}}" class="rounded-circle img-fluid" id="prof" alt="Profile Image"
+                style=" padding-left: 20px; border-radius: 50%;">
             </div>
             <div class="col-sm-3">
-              <ul class="list-group">
-                <li class="list-group-item" *ngIf="profile.bio">{{profile.bio}}</li>
-                <li class="list-group-item" *ngIf="profile.hireable">Available for hire</li>
-                <li class="list-group-item" *ngIf="profile.blog">
-                  <a href="{{profile.blog}}" target="_blank">{{profile.blog}}</a></li>
-                <li class="list-group-item" *ngIf="profile.email"><a href="{{profile.email}}"
-                    target="_blank">{{profile.email}}</a></li>
-              </ul>
+              <div class="class col-md-12" style="background-color: #c9b7a3;">
+                <ul class="list-group card">
+                  <li class="list-group-item" *ngIf="profile.bio">{{profile.bio}}</li>
+                  <li class="list-group-item" *ngIf="profile.hireable">Available for hire</li>
+                  <li class="list-group-item" *ngIf="profile.blog">
+                    <a href="{{profile.blog}}" target="_blank">{{profile.blog}}</a></li>
+                  <li class="list-group-item" *ngIf="profile.email"><a href="{{profile.email}}"
+                      target="_blank">{{profile.email}}</a></li>
+                </ul>
+              </div>
             </div>
             <div class="col-sm-5">
               <div>
                 <p>
                   <span class="btn btn-success">{{profile.followers}} Followers</span>
-                  <span class="btn btn-warning">Following {{profile.following}} </span>
-                  <span class="btn btn-danger">{{profile.public_gists}} Public Gists </span>
-                  <span class="btn btn-primary">{{profile.public_repos}} Public Repos</span>
+                  <span class="btn btn-info">Following {{profile.following}} </span>
+                  <span class="btn btn-success">{{profile.public_gists}} Public Gists </span>
+                  <span class="btn btn-info">{{profile.public_repos}} Public Repos</span>
+                  <span class="btn btn-warning">Created on {{profile.created_at|date}}</span>
                 </p>
                 <p>
                   <a href="{{profile.html_url}}" class="btn btn-primary" target="_blank">View Profile On Github</a>
                 </p>
-                <div class="panel panel-default">
-                  <div class="panel panel-heading">
-                    <h3 class="panel-title">Repos</h3>
+                <div class="card" style="background-color: #c9b7a3;">
+                  <div class="card card-heading" style="background-color: rgb(134, 134, 207)">
+                    <h3 class="panel-title" style=" color: yellow; text-align: center;">Repos</h3>
                   </div>
-                  <div class="class panel-body" *ngFor="let repo of repos">
+                  <div class="class card-body" *ngFor="let repo of repos">
                     <p class="clearfix">
-                      {{repo.name}}<a href="{{repo.html_url}}" class="btn btn-sm btn-info" target="_blank">View this
-                        project
-                        on github</a>
+                      <span style="color: antiquewhite; font-size: 25px;">{{repo.name}}</span><br><a
+                        href="{{repo.html_url}}" class="btn btn-sm btn-info" target="_blank">View this
+                        project on github</a>
                     </p>
-                    <p>{{repo.description}}</p>
+                    <p style="color: grey; font-size: 18px;">{{repo.description}}</p>
                   </div>
                 </div>
               </div>
